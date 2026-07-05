@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
-import { Bell, LogOut, Menu, X, User as UserIcon } from 'lucide-react';
+import { Bell, LogOut, Menu, X, User as UserIcon, Globe } from 'lucide-react';
 import Logo from '../common/Logo';
 import api from '../../services/api';
 
@@ -108,6 +108,10 @@ const Navbar = ({ toggleSidebar }) => {
           <div className="hidden md:flex items-center gap-6">
             <Link to="/awareness" className="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors">
               Awareness
+            </Link>
+            <Link to="/ewaste-map" className="flex items-center gap-1.5 text-sm font-medium text-slate-300 hover:text-cyan-400 transition-colors">
+              <Globe className="h-3.5 w-3.5" />
+              Global Map
             </Link>
             
             {isAuthenticated ? (
@@ -230,6 +234,14 @@ const Navbar = ({ toggleSidebar }) => {
               className="rounded-lg px-3 py-2 text-sm font-medium text-slate-300 hover:bg-slate-800 hover:text-white"
             >
               Awareness
+            </Link>
+            <Link
+              to="/ewaste-map"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium text-slate-300 hover:bg-slate-800 hover:text-cyan-400"
+            >
+              <Globe className="h-3.5 w-3.5" />
+              Global Map
             </Link>
             {isAuthenticated ? (
               <>

@@ -9,6 +9,7 @@ import Landing from './pages/Landing';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Awareness from './pages/Awareness';
+import EWasteMap from './pages/EWasteMap';
 
 // Citizen Dashboard Pages
 import UserDashboard from './pages/user/UserDashboard';
@@ -40,6 +41,7 @@ const App = () => {
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
             <Route path="awareness" element={<Awareness />} />
+            <Route path="ewaste-map" element={<EWasteMap />} />
           </Route>
 
           {/* Citizen Dashboard Routes */}
